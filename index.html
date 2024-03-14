@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum4PDW</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+            margin: 0;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body onload="startTime()">
+    <script src="script.js"></script>
+    <h1><center>Selamat Datang</center></h1>
+
+    <div class="jam">
+        <p id="hasil">Waktu Saat Ini </p>
+    </div>
+
+    <script>
+        function updateTime() {
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+            var timeString = hours + ":" + minutes + ":" + seconds;
+            document.getElementById("hasil").innerHTML = "" + timeString;
+        }
+
+        // Panggil updateTime() setiap detik
+        setInterval(updateTime, 1000);
+    </script>
+    
+    <div class="image-center">
+        <img
+        src="https://i.pinimg.com/736x/a3/41/d3/a341d37f5af6f54bd99753d270650c8b.jpg"
+        alt="img1"
+        style="border-radius: 50px"
+        width="20%"
+        />
+        <img
+        src="https://i.pinimg.com/564x/b5/5a/c8/b55ac85b7fc2b12fb8d9ed5dc1064c0b.jpg"
+        alt="img2"
+        style="border-radius: 50px"
+        width="25%"
+        />
+        <img
+        src="https://i.pinimg.com/736x/7f/20/48/7f204859cf53ff7a3f73aa812e41124e.jpg"
+        alt="img3"
+        style="border-radius: 50px"
+        width="20%"
+        />
+    </div>
+    <div class="button">
+        <center><button onclick="show()">Next Page</button></center>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
